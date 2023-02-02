@@ -10,3 +10,6 @@ My qtile customize of qtile in Void-linux.
 * picom.
 * feh (for wallpaper).
 * Navigator: Chromium.
+* Redshift.
+* Bat.
+* lsd.
