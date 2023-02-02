@@ -1,0 +1,48 @@
+configuration {
+	modi:				"drun";
+	font:				"Ubuntu 11";
+	display-drun: 			"";
+  show-icons: true;
+	sidebar-mode: 			false;
+}
+
+* {
+	bg:				#62602f;
+	fg:				#d4be98;
+	button:				#32302f;
+
+	background-color:		@bg;
+	text-color:			@fg;
+}
+
+
+entry {
+	placeholder:			"Search";
+	expand:                         true;
+	padding:                        5px 2% 5px 2%;
+	background-color:               @button;
+  placeholder-color:              @fg;
+}
+
+inputbar {
+	children: 			[ prompt, entry ];
+	background-color:               @button;
+	text-color:                     @fg;
+	expand:                         false;
+	border-radius:                  6px;
+	padding:                        8px;
+}
+
+listview {
+	columns:                        1;
+	lines:	                        8;
+	cycle:                          false;
+	dynamic:                        true;
+	layout:                         vertical;
+}
+
+element selected {
+	background-color:               @fg;
+	text-color:                     #999999;
+	border-radius:                  6px;
+}
