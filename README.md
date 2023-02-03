@@ -1,5 +1,5 @@
 
-# qtile-rice-config
+# qtile dotfiles for Void Linux
 My qtile customize of qtile in Void-linux.
 ![2023-02-02-184034_1366x768_scrot](https://user-images.githubusercontent.com/93288354/216456285-cb40c490-166a-4776-a277-89675604c8c8.png)
 ![2023-02-02-184255_1366x768_scrot](https://user-images.githubusercontent.com/93288354/216456323-e882dfc1-4770-41fb-b46f-65e67a6b086b.png)
