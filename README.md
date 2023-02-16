@@ -10,7 +10,7 @@ My qtile customize of qtile in Void-linux.
 * Python: pip (https://pypi.org/project/pip/) and psutil (https://pypi.org/project/psutil/).
 * Nerd Fonts complete (sudo xbps-install -Su nerd-fonts-ttf).
 * Brightnessctl (sudo xbps-install -Su brightnessctl).
-* Amixer.
+* Pipewire and amixer (for audio).
 
 # Optional:
 * Terminal: alacritty.
@@ -23,3 +23,4 @@ My qtile customize of qtile in Void-linux.
 * lsd.
 * Neovim (https://github.com/NvChad/NvChad).
 * Scrot (for sreenshots, and create the folder ~/Images/Screenshoots).
+* Lightdm (https://github.com/Xubuntu/lightdm-gtk-greeter).
