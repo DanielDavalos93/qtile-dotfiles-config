@@ -24,3 +24,6 @@ My qtile customize of qtile in Void-linux.
 * Neovim (https://github.com/NvChad/NvChad).
 * Scrot (for sreenshots, and create the folder ~/Images/Screenshoots).
 * Lightdm (https://github.com/Xubuntu/lightdm-gtk-greeter). You can change the lasts lines in the file lightdm-gtk-greeter, and add you favourite image in /usr/share/pixmaps/.
+
+Configuration of session and rofi:
+![session-rofi](https://user-images.githubusercontent.com/93288354/219487966-990f8425-77c7-467f-b5d6-7d22eb457d2c.png)
