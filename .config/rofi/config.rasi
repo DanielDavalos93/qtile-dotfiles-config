@@ -7,13 +7,14 @@ configuration {
 }
 
 * {
-	bg:				#62602f;
-	fg:				#d4be98;
-	button:				#32302f;
+	bg:				#62626f;
+	fg:				#bbbe98;
+	button:				#acc088;
 
 	background-color:		@bg;
 	text-color:			@fg;
 }
+
 
 
 entry {
