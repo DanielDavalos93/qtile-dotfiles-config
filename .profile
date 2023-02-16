@@ -9,3 +9,4 @@ cbatticon -u 5 &
 feh --bg-fill --randomize ~/Imágenes/Wallpaper/* &
 picom --config ~/.config/picom/picom.conf &
 plank &
+nm-applet &
