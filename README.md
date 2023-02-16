@@ -22,3 +22,4 @@ My qtile customize of qtile in Void-linux.
 * Bat.
 * lsd.
 * Neovim (https://github.com/NvChad/NvChad).
+* Scrot (for sreenshots, and create the folder ~/Images/Screenshoots).
