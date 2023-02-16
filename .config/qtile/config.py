@@ -141,8 +141,8 @@ keys = [
     # Brillo de pantalla
     Key([],"XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
     Key([],"XF86MonBrightnessDown",lazy.spawn("brightnessctl set 10%-")),
-    Key([mod], "s", lazy.spawn("scrot")),
-    Key([mod, "shift"], "s", lazy.spawn("scrot -s")),
+    Key([mod], "s", lazy.spawn("scrot -e 'mv $f $HOME/Images/Screenshots/'")),          #Must to create the folder ~/Images/Screenshots
+    Key([mod, "shift"], "s", lazy.spawn("scrot -s 'mv $f $HOME/Images/Screenshots/'")), #Must to create the folder ~/Images/Screenshots
     Key([], "F1", lazy.spawn("betterlockscreen --lock blur"))
 ]
 
