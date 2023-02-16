@@ -8,12 +8,14 @@ My qtile customize of qtile in Void-linux.
 
 # Dependences:
 * Python: pip (https://pypi.org/project/pip/) and psutil (https://pypi.org/project/psutil/).
+* Shell: zsh.
 * Nerd Fonts complete (sudo xbps-install -Su nerd-fonts-ttf).
 * Brightnessctl (sudo xbps-install -Su brightnessctl).
 * Pipewire and amixer (for audio).
 
 # Optional:
 * Terminal: alacritty.
+* Zsh-syntax-highlighting (https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
 * dunst.
 * picom.
 * feh (for random wallpapers).
