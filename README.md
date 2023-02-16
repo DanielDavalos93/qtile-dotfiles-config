@@ -23,4 +23,4 @@ My qtile customize of qtile in Void-linux.
 * lsd.
 * Neovim (https://github.com/NvChad/NvChad).
 * Scrot (for sreenshots, and create the folder ~/Images/Screenshoots).
-* Lightdm (https://github.com/Xubuntu/lightdm-gtk-greeter).
+* Lightdm (https://github.com/Xubuntu/lightdm-gtk-greeter). You can change the lasts lines in the file lightdm-gtk-greeter, and add you favourite image in /usr/share/pixmaps/.
