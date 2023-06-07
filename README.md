@@ -1,9 +1,8 @@
 
 # qtile dotfiles for Void Linux
 My qtile customize of qtile in Void-linux.
-![2023-02-02-184034_1366x768_scrot](https://user-images.githubusercontent.com/93288354/216456285-cb40c490-166a-4776-a277-89675604c8c8.png)
-![2023-02-02-184255_1366x768_scrot](https://user-images.githubusercontent.com/93288354/216456323-e882dfc1-4770-41fb-b46f-65e67a6b086b.png)
 
+![Captura de pantalla_2023-06-07_13-22-04](https://github.com/DanielDavalos93/qtile-dotfiles-config/assets/93288354/4124adde-4a6f-4c38-b1c1-7f0c8cb0ae06)
 
 
 # Dependences:
@@ -12,12 +11,14 @@ My qtile customize of qtile in Void-linux.
 * Nerd Fonts complete (sudo xbps-install -Su nerd-fonts-ttf).
 * Brightnessctl (sudo xbps-install -Su brightnessctl).
 * Pipewire and amixer (for audio).
+* xfce4-power-menu and xfce4-screensaver.
 
 # Optional:
 * Terminal: alacritty.
 * Zsh-syntax-highlighting (https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
 * dunst.
 * picom.
+* rofi (https://github.com/adi1090x/rofi)
 * feh (for random wallpapers).
 * Navigator: Chromium.
 * Redshift.
