@@ -89,9 +89,10 @@ keys = [
     Key([mod], "k", lazy.spawn("kitty")),
 
     # Lanzar menu
-    Key([mod], "m", lazy.spawn("/home/daniel/.config/rofi/launchers/type-1/launcher.sh"), desc="Abrir menu"),
-    Key([mod], "a", lazy.spawn("/home/daniel/.config/rofi/applets/bin/apps.sh")),
-    Key([mod], "q", lazy.spawn("/home/daniel/.config/rofi/powermenu/type-1/powermenu.sh")),
+    Key([mod], "m", lazy.spawn("/home/void/.config/rofi/launchers/type-1/launcher.sh"), desc="Abrir menu"),
+    Key([mod], "a", lazy.spawn("/home/void/.config/rofi/applets/bin/apps.sh")),
+    Key([mod], "q", lazy.spawn("/home/void/.config/rofi/powermenu/type-1/powermenu.sh")),
+    Key([mod], "i", lazy.spawn("/home/void/.config/rofi/applets/bin/quicklinks.sh")),
     
     # Lanzar explorador
     Key([mod], "c", lazy.spawn("chromium"), desc="Abrir Chromium"),
@@ -110,30 +111,30 @@ keys = [
     Key([mod, "shift"], "e", lazy.shutdown()),
     
     # Control de volumen
-   Key([], "XF86AudioRaiseVolume", lazy.spawn("/home/daniel/.local/bin/volumen.sh up")),
-   Key([], "XF86AudioLowerVolume", lazy.spawn("/home/daniel/.local/bin/volumen.sh down")),
+   Key([], "XF86AudioRaiseVolume", lazy.spawn("/home/void/.local/bin/volumen.sh up")),
+   Key([], "XF86AudioLowerVolume", lazy.spawn("/home/void/.local/bin/volumen.sh down")),
 #   Key([], "XF86AudioMute", lazy.spawn("/home/daniel/.local/bin/volumen.sh mute")),
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
 #    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 5- unmute")),
 #    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer -c 0 sset Master 5+ unmute")),
 
     # Brillo de pantalla
-    Key([], "XF86MonBrightnessUp", lazy.spawn("/home/daniel/.local/bin/brillo.sh up")),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("/home/daniel/.local/bin/brillo.sh down")),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("$HOME/.local/bin/brillo.sh up")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("$HOME/.local/bin/brillo.sh down")),
 #    Key([],"XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
 #    Key([],"XF86MonBrightnessDown",lazy.spawn("brightnessctl set 5%-")),
-    Key([mod], "s", lazy.spawn("/home/daniel/.config/rofi/applets/bin/screenshot.sh")),
-    Key([mod],"Print", lazy.spawn('xfce4-screenshooter --fullscreen -s "/home/daniel/Imágenes/Screenshots"')),
+    Key([mod], "s", lazy.spawn("/home/void/.config/rofi/applets/bin/screenshot.sh")),
+    Key([mod],"Print", lazy.spawn('xfce4-screenshooter --fullscreen -s "/home/void/Imágenes/Screenshots"')),
     Key([], "Print", lazy.spawn('xfce4-screenshooter')),
-    Key([mod, "shift"], "Print", lazy.spawn('xfce4-screenshooter --region -s /home/daniel/Imágenes/Screenshots/')),
-    Key([], "F1", lazy.spawn("betterlockscreen --lock blur"))
+    Key([mod, "shift"], "Print", lazy.spawn('xfce4-screenshooter --region -s /home/void/Imágenes/Screenshots/')),
+    Key([], "F1", lazy.spawn("betterlockscreen --lock"))
 ]
 
 key_exensions = Key([mod, "shift"], 'q', lazy.run_extension(extension.CommandSet(
     commands={
         'reboot': 'qtile cmd-obj -o cmd -f reboot',
-        'shutdown': 'shutdown',
-        #'lock session': '/home/tokariew/.local/bin/lockme',
+        'shutdown': lazy.shutdown(),
+        'lock session': '/home/tokariew/.local/bin/lockme',
         'restart qtile': 'qtile cmd-obj -o cmd -f restart',
         'logout': 'qtile cmd-obj -o cmd -f shutdown',
         },
@@ -205,7 +206,7 @@ screens = [
             [
                 widget.Sep(
                     linewidth=0,
-                    padding=3
+                    padding=5
                 ),
                 widget.GroupBox(
                     active="#fcfeef",
@@ -234,41 +235,41 @@ screens = [
                     max_chars=58
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     background="#232136",
                     foreground= "#c1c1c1", #"#f6c177",
-                    padding=-3,
-                    fontsize=38
+                    padding=-5,
+                    fontsize=52
                 ),
                 widget.TextBox(
                     text=' ',
                     background= "#c1c1c1", #"#f6c177",
                     foreground="#191724",
-                    padding=7
+                    padding=2
                 ),
                 widget.CurrentLayout(
                     background= "#c1c1c1", #"#f6c177",
                     foreground="#191724"
                 ),
                 widget.TextBox(
-                    text='',
-                    background= "#c6c6c1", #"#f6c177",
+                    text='',
+                    background= "#c1c1c1", #"#f6c177",
                     foreground= "#e0def4",
-                    padding=-3,
-                    fontsize=38
+                    padding=-5,
+                    fontsize=52
                 ),
                 widget.ThermalZone(
                     format=" {temp}°C",
                     fgcolor_normal="#191724",
                     background= "#e0def4",
-                    zone= "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
+                    zone= "/sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input"
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     foreground= "#bbcdef",
                     background= "#e0def4",
-                    padding=-3,
-                    fontsize=38
+                    padding=-5,
+                    fontsize=52
                 ),
                 widget.Memory(
                     format="{MemUsed: .0f}{mm}",
@@ -277,11 +278,11 @@ screens = [
                     interval=1.0
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     background="#bbcdef",
                     foreground="#9ccfd8",
-                    padding=-3,
-                    fontsize=38
+                    padding=-5,
+                    fontsize=52
                 ),
                 widget.Net(
                     interface="wlo1",
@@ -291,17 +292,17 @@ screens = [
                     update_interval=1.0
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     background="#9ccfd8",
                     foreground= "#c4b7e7", #"#c4a7e7",
-                    padding=-3,
-                    fontsize=38
+                    padding=-5,
+                    fontsize=52
                 ),
                 widget.TextBox(
                     text='',
                     background="#c4b7e7",
                     foreground="#191724",
-                    padding=7
+                    padding=2
                 ),
                 widget.Clock(
                     background="#c4b7e7",
@@ -310,17 +311,17 @@ screens = [
                     update_interval=60.0
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     background="#c4b7e7",
                     foreground= "#eb9ebc", #"#eb6f92",
-                    padding=-3,
-                    fontsize=38
+                    padding=-5,
+                    fontsize=52
                 ),
                 widget.TextBox(
                     text='',
                     background="#eb9ebc",
                     foreground="#191724",
-                    padding=7
+                    padding=2
                 ),
                 widget.QuickExit(
                     background = "#eb9ebc",
@@ -329,11 +330,11 @@ screens = [
                     default_text = 'embogue',
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     background="#eb9ebc",
                     foreground="#232136",
-                    padding=-3,
-                    fontsize=38
+                    padding=-5,
+                    fontsize=52
                 ),
                 widget.Systray(),
                 widget.Sep(
@@ -380,7 +381,7 @@ screens = [
                     background="#e0def8"
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     background="#e0def4",
                     foreground="#ea9a97",
                     padding=-3,
@@ -392,7 +393,7 @@ screens = [
                     format=" {load_percent}%"
                 ),
                 widget.TextBox(
-                    text='',
+                    text='',
                     background="#ea9a97",
                     foreground="#c4a7e7",
                     padding=-3,
@@ -437,7 +438,7 @@ mouse = [
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
 follow_mouse_focus = True
-bring_front_click = False
+bring_front_click = True
 cursor_warp = True
 floating_layout = layout.Floating(
     float_rules=[
