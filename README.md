@@ -1,6 +1,6 @@
 
 # qtile dotfiles for Void Linux
-My qtile customize of qtile in Void-linux.
+My qtile customize in Void-linux.
 
 ![Captura de pantalla_2023-06-07_13-22-04](https://github.com/DanielDavalos93/qtile-dotfiles-config/assets/93288354/4124adde-4a6f-4c38-b1c1-7f0c8cb0ae06)
 
