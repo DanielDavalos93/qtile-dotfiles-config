@@ -89,10 +89,10 @@ keys = [
     Key([mod], "k", lazy.spawn("kitty")),
 
     # Lanzar menu
-    Key([mod], "m", lazy.spawn("/home/void/.config/rofi/launchers/type-1/launcher.sh"), desc="Abrir menu"),
-    Key([mod], "a", lazy.spawn("/home/void/.config/rofi/applets/bin/apps.sh")),
-    Key([mod], "q", lazy.spawn("/home/void/.config/rofi/powermenu/type-1/powermenu.sh")),
-    Key([mod], "i", lazy.spawn("/home/void/.config/rofi/applets/bin/quicklinks.sh")),
+    Key([mod], "m", lazy.spawn("$HOME/.config/rofi/launchers/type-1/launcher.sh"), desc="Abrir menu"),
+    Key([mod], "a", lazy.spawn("$HOME/.config/rofi/applets/bin/apps.sh")),
+    Key([mod], "q", lazy.spawn("$HOME/.config/rofi/powermenu/type-1/powermenu.sh")),
+    Key([mod], "i", lazy.spawn("$HOME/.config/rofi/applets/bin/quicklinks.sh")),
     
     # Lanzar explorador
     Key([mod], "c", lazy.spawn("chromium"), desc="Abrir Chromium"),
@@ -111,8 +111,8 @@ keys = [
     Key([mod, "shift"], "e", lazy.shutdown()),
     
     # Control de volumen
-   Key([], "XF86AudioRaiseVolume", lazy.spawn("/home/void/.local/bin/volumen.sh up")),
-   Key([], "XF86AudioLowerVolume", lazy.spawn("/home/void/.local/bin/volumen.sh down")),
+   Key([], "XF86AudioRaiseVolume", lazy.spawn("$HOME/.local/bin/volumen.sh up")),
+   Key([], "XF86AudioLowerVolume", lazy.spawn("$HOME/.local/bin/volumen.sh down")),
 #   Key([], "XF86AudioMute", lazy.spawn("/home/daniel/.local/bin/volumen.sh mute")),
     Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
 #    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer -c 0 sset Master 5- unmute")),
@@ -123,10 +123,10 @@ keys = [
     Key([], "XF86MonBrightnessDown", lazy.spawn("$HOME/.local/bin/brillo.sh down")),
 #    Key([],"XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
 #    Key([],"XF86MonBrightnessDown",lazy.spawn("brightnessctl set 5%-")),
-    Key([mod], "s", lazy.spawn("/home/void/.config/rofi/applets/bin/screenshot.sh")),
-    Key([mod],"Print", lazy.spawn('xfce4-screenshooter --fullscreen -s "/home/void/Imágenes/Screenshots"')),
+    Key([mod], "s", lazy.spawn("$HOME/.config/rofi/applets/bin/screenshot.sh")),
+    Key([mod],"Print", lazy.spawn('xfce4-screenshooter --fullscreen -s "$HOME/Imágenes/Screenshots"')),
     Key([], "Print", lazy.spawn('xfce4-screenshooter')),
-    Key([mod, "shift"], "Print", lazy.spawn('xfce4-screenshooter --region -s /home/void/Imágenes/Screenshots/')),
+    Key([mod, "shift"], "Print", lazy.spawn('xfce4-screenshooter --region -s $HOME/Imágenes/Screenshots/')),
     Key([], "F1", lazy.spawn("betterlockscreen --lock"))
 ]
 
@@ -134,7 +134,7 @@ key_exensions = Key([mod, "shift"], 'q', lazy.run_extension(extension.CommandSet
     commands={
         'reboot': 'qtile cmd-obj -o cmd -f reboot',
         'shutdown': lazy.shutdown(),
-        'lock session': '/home/tokariew/.local/bin/lockme',
+        #'lock session': '/home/tokariew/.local/bin/lockme',
         'restart qtile': 'qtile cmd-obj -o cmd -f restart',
         'logout': 'qtile cmd-obj -o cmd -f shutdown',
         },
