@@ -19,7 +19,7 @@ My qtile customize in Void-linux.
 * dunst.
 * picom.
 * rofi (https://github.com/adi1090x/rofi)
-* feh (for random wallpapers).
+* feh.
 * Navigator: Chromium.
 * Redshift.
 * Bat.
